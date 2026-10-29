@@ -1,0 +1,31 @@
+name: Site ao vivo
+
+on:
+  schedule:
+    - cron: "7,22,37,52 12-21 * * 1-5"   # a cada 15 min, das 9h às 18h de Brasília, seg a sex
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ao-vivo
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -q curl_cffi
+      - run: python ao_vivo.py
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/dados.json
+          git commit -m "Ao vivo $(TZ=America/Sao_Paulo date '+%d/%m %H:%M')" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
