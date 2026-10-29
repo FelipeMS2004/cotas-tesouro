@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tesouro Direto agora</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --fundo: #E9EFED;
+    --papel: #F7FAF9;
+    --tinta: #13201E;
+    --suave: #5A6B67;
+    --linha: #C9D5D1;
+    --base: #0F4C45;
+    --sobe: #B23A48;
+    --cai: #1E7A58;
+    --grade: #DCE5E2;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --fundo: #0D1614; --papel: #14201E; --tinta: #E2EBE8; --suave: #93A6A1;
+      --linha: #2A3A37; --base: #5FC2B2; --sobe: #F07A86; --cai: #5ACB9C; --grade: #1E2D2A;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --fundo: #0D1614; --papel: #14201E; --tinta: #E2EBE8; --suave: #93A6A1;
+    --linha: #2A3A37; --base: #5FC2B2; --sobe: #F07A86; --cai: #5ACB9C; --grade: #1E2D2A;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { margin: 0; background: var(--fundo); color: var(--tinta); }
+  body {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.45;
+    font-size: 16px;
+  }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+
+  header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 32px; margin-bottom: 28px; }
+  h1 {
+    margin: 0; font-stretch: 72%; font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.6rem);
+    line-height: .95; letter-spacing: -.01em; color: var(--base);
+  }
+  .status { color: var(--suave); font-size: .95rem; max-width: 46ch; }
+  .status strong { color: var(--tinta); font-weight: 600; }
+  .aviso {
+    margin: -8px 0 24px; padding: 10px 14px; border-left: 4px solid var(--sobe);
+    background: var(--papel); color: var(--tinta); font-size: .95rem;
+  }
+  .aviso[hidden] { display: none; }
+
+  .titulos { border-top: 2px solid var(--tinta); }
+  .titulo {
+    display: grid; align-items: center; gap: 8px 28px;
+    grid-template-columns: minmax(150px, 1.1fr) minmax(170px, 1fr) minmax(200px, 1.6fr) minmax(170px, 1fr);
+    padding: 22px 0; border-bottom: 1px solid var(--linha);
+  }
+  .nome { font-weight: 700; font-size: 1.2rem; font-stretch: 90%; }
+  .venc { color: var(--suave); font-size: .9rem; }
+  .taxa { font-stretch: 62%; font-weight: 700; font-size: clamp(2.6rem, 7vw, 3.4rem); line-height: 1; letter-spacing: -.01em; }
+  .taxa { white-space: nowrap; }
+  .taxa small { display: block; font-size: .3em; font-stretch: 100%; font-weight: 500; color: var(--suave); letter-spacing: 0; margin-bottom: 4px; }
+  .delta { font-size: .9rem; margin-top: 6px; color: var(--suave); }
+  .delta b { font-weight: 700; }
+  .sobe { color: var(--sobe); }
+  .cai { color: var(--cai); }
+  svg.degraus { width: 100%; height: 64px; display: block; overflow: visible; }
+  .degraus .eixo { stroke: var(--grade); stroke-width: 1; }
+  .degraus .traco { fill: none; stroke: var(--base); stroke-width: 2.25; stroke-linejoin: round; }
+  .degraus .ponto { fill: var(--papel); stroke: var(--base); stroke-width: 2; }
+  .degraus text { fill: var(--suave); font-size: 11px; font-family: inherit; }
+  .precos { display: grid; grid-template-columns: auto auto; gap: 2px 14px; font-size: .92rem; justify-content: start; }
+  .precos dt { color: var(--suave); }
+  .precos dd { margin: 0; text-align: right; font-weight: 600; }
+
+  h2 { font-stretch: 80%; font-weight: 700; font-size: 1.35rem; margin: 44px 0 4px; }
+  .nota { color: var(--suave); font-size: .92rem; margin: 0 0 14px; max-width: 70ch; }
+  .rolagem { overflow-x: auto; background: var(--papel); border: 1px solid var(--linha); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .95rem; }
+  th, td { padding: 9px 14px; text-align: right; border-bottom: 1px solid var(--linha); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-weight: 600; color: var(--suave); font-stretch: 90%; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td small { color: var(--suave); }
+
+  footer { margin-top: 36px; color: var(--suave); font-size: .85rem; max-width: 70ch; }
+  .vazio { padding: 40px 0; color: var(--suave); }
+
+  @media (max-width: 820px) {
+    .titulo { grid-template-columns: 1fr 1fr; }
+    .titulo .grafico { grid-column: 1 / -1; order: 3; }
+    .titulo .precos { order: 4; grid-column: 1 / -1; grid-template-columns: repeat(4, auto); }
+  }
+  @media (max-width: 480px) {
+    main { padding: 24px 16px 40px; }
+    .titulo .precos { grid-template-columns: auto auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Tesouro Direto agora</h1>
+    <p class="status" id="status">Carregando…</p>
+  </header>
+  <p class="aviso" id="aviso" hidden></p>
+
+  <section class="titulos" id="titulos" aria-live="polite"></section>
+
+  <h2>Atualizações de hoje</h2>
+  <p class="nota">O Tesouro muda os preços algumas vezes por dia. Cada linha é uma dessas atualizações, com a taxa de venda de cada título.</p>
+  <div class="rolagem"><table id="historico"></table></div>
+
+  <footer>
+    Taxas de IPCA+ e Renda+ são o juro real acima do IPCA. A LTN mostra a taxa prefixada. Taxa de venda é a usada no resgate antecipado e taxa de compra, a usada para investir. A página verifica novos dados a cada minuto.
+  </footer>
+</main>
+
+<script>
+const fmt = (v, d = 2) => v == null ? "–" : v.toLocaleString("pt-BR", { minimumFractionDigits: d, maximumFractionDigits: d });
+const hora = iso => iso ? iso.slice(11, 16).replace(":", "h") : "–";
+const dataBR = iso => iso ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}` : "";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function minutos(iso) { const h = +iso.slice(11, 13), m = +iso.slice(14, 16); return h * 60 + m; }
+
+function graficoDegraus(pontos, ate) {
+  // pontos: [{t: minutos, v: taxa}] — o preço do Tesouro anda em degraus, então o traço também
+  const validos = pontos.filter(p => p.v != null);
+  if (validos.length === 0) return "";
+  const W = 300, H = 64, ini = 9 * 60 + 30, fim = 18 * 60;
+  const vs = validos.map(p => p.v);
+  let lo = Math.min(...vs), hi = Math.max(...vs);
+  if (hi - lo < 0.04) { const c = (hi + lo) / 2; lo = c - 0.02; hi = c + 0.02; }
+  const x = t => Math.max(0, Math.min(W, (t - ini) / (fim - ini) * W));
+  const y = v => 6 + (hi - v) / (hi - lo) * (H - 22);
+  let d = `M${x(validos[0].t)},${y(validos[0].v)}`;
+  for (let i = 1; i < validos.length; i++) d += ` H${x(validos[i].t)} V${y(validos[i].v)}`;
+  d += ` H${x(Math.max(ate, validos[validos.length - 1].t))}`;
+  const pts = validos.map(p => `<circle class="ponto" cx="${x(p.t)}" cy="${y(p.v)}" r="3"/>`).join("");
+  const marcas = [[10, "10h"], [12, "12h"], [15, "15h"], [18, "18h"]]
+    .map(([h, r]) => `<line class="eixo" x1="${x(h * 60)}" x2="${x(h * 60)}" y1="2" y2="${H - 14}"/><text x="${x(h * 60)}" y="${H}" text-anchor="middle">${r}</text>`).join("");
+  return `<svg class="degraus" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Taxa de venda ao longo do dia">${marcas}<path class="traco" d="${d}"/>${pts}</svg>`;
+}
+
+function render(dados) {
+  const status = document.getElementById("status");
+  const aviso = document.getElementById("aviso");
+  const ordem = dados.ordem || Object.keys(dados.titulos || {});
+  const hist = dados.historico || [];
+  const agora = new Date();
+
+  status.innerHTML = dados.precificacao_td
+    ? `Preços da atualização das <strong>${hora(dados.precificacao_td)}</strong> de ${dataBR(dados.precificacao_td)}. Última verificação às ${hora(dados.consultado_em)}.`
+    : "Ainda sem dados.";
+
+  const avisos = [];
+  if (dados.erro) avisos.push(`A última verificação falhou (${esc(dados.erro)}). Os preços mostrados são os da verificação anterior.`);
+  const dia = agora.getDay(), mins = agora.getHours() * 60 + agora.getMinutes();
+  const pregao = dia >= 1 && dia <= 5 && mins >= 9 * 60 + 30 && mins < 18 * 60;
+  if (dados.consultado_em && pregao) {
+    const atraso = (agora - new Date(dados.consultado_em)) / 60000;
+    if (atraso > 45) avisos.push(`O robô não verifica os preços há ${Math.round(atraso)} minutos. Confira a aba Actions no GitHub.`);
+  }
+  if (!pregao) avisos.push("Fora do horário de negociação (9h30 às 18h em dias úteis): os preços são apenas referência.");
+  aviso.hidden = avisos.length === 0;
+  aviso.innerHTML = avisos.join(" ");
+
+  const sec = document.getElementById("titulos");
+  if (!dados.titulos) { sec.innerHTML = `<p class="vazio">Nenhum dado ainda. Rode o workflow “Site ao vivo” na aba Actions do GitHub.</p>`; return; }
+  const ateMin = dados.consultado_em && dados.consultado_em.slice(0, 10) === (dados.data || "") ? minutos(dados.consultado_em) : 18 * 60;
+
+  sec.innerHTML = ordem.map(ap => {
+    const t = dados.titulos[ap];
+    if (!t) return `<article class="titulo"><div><div class="nome">${esc(ap)}</div><div class="venc">Não encontrado no Tesouro</div></div></article>`;
+    const primeiro = hist.find(h => h.titulos[ap]?.taxa_venda != null)?.titulos[ap];
+    let delta = "Primeira atualização do dia";
+    if (primeiro && hist.length > 1) {
+      const bps = Math.round((t.taxa_venda - primeiro.taxa_venda) * 100);
+      const pu = (t.pu_venda / primeiro.pu_venda - 1) * 100;
+      const cls = bps > 0 ? "sobe" : bps < 0 ? "cai" : "";
+      delta = bps === 0 ? "Sem mudança desde a primeira atualização do dia"
+        : `<b class="${cls}">${bps > 0 ? "+" : ""}${bps} bps</b> na taxa e <b class="${cls}">${pu > 0 ? "+" : ""}${fmt(pu)}%</b> no preço desde a primeira atualização`;
+    }
+    const pontos = hist.map(h => ({ t: minutos(h.precificacao), v: h.titulos[ap]?.taxa_venda }));
+    const prefixo = t.indexador === "Prefixado" ? "Prefixado" : "IPCA +";
+    return `<article class="titulo">
+      <div><div class="nome">${esc(ap)}</div><div class="venc">Vence em ${dataBR(t.vencimento)}</div></div>
+      <div><div class="taxa"><small>${prefixo}</small>${fmt(t.taxa_venda)}%</div><div class="delta">${delta}</div></div>
+      <div class="grafico">${graficoDegraus(pontos, ateMin)}</div>
+      <dl class="precos">
+        <dt>PU venda</dt><dd>R$ ${fmt(t.pu_venda)}</dd>
+        <dt>PU compra</dt><dd>R$ ${fmt(t.pu_compra)}</dd>
+        <dt>Taxa compra</dt><dd>${fmt(t.taxa_compra)}%</dd>
+      </dl>
+    </article>`;
+  }).join("");
+
+  const tab = document.getElementById("historico");
+  tab.innerHTML = `<thead><tr><th>Atualização</th>${ordem.map(ap => `<th>${esc(ap)}</th>`).join("")}</tr></thead>
+    <tbody>${hist.slice().reverse().map(h => `<tr><td>${hora(h.precificacao)}</td>${ordem.map(ap => {
+      const v = h.titulos[ap]; return `<td>${fmt(v?.taxa_venda)}% <small>R$ ${fmt(v?.pu_venda)}</small></td>`;
+    }).join("")}</tr>`).join("") || `<tr><td colspan="${ordem.length + 1}">Nenhuma atualização registrada hoje.</td></tr>`}</tbody>`;
+}
+
+async function carregar() {
+  try {
+    const r = await fetch(`dados.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    render(await r.json());
+  } catch (e) {
+    document.getElementById("status").textContent = "Ainda sem dados. Rode o workflow “Site ao vivo” na aba Actions do GitHub.";
+  }
+}
+carregar();
+setInterval(carregar, 60000);
+</script>
+</body>
+</html>
