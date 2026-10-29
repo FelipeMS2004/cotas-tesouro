@@ -1,6 +1,6 @@
 # Captura as cotações do Tesouro Direto e acrescenta em cotacoes.csv
 # Roda sozinho pelo GitHub Actions às 10h, 12h e 15h (horário de Brasília)
-import csv, os, sys, unicodedata
+import csv, os, re, sys, unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -61,13 +61,14 @@ def achar_titulos(obj):
             yield from achar_titulos(v)
 
 
-def pegar(bloco, *partes):
-    for k, v in bloco.items():
-        kl = k.lower()
-        if isinstance(v, (int, float)) and not isinstance(v, bool) \
-                and all(p in kl for p in partes) and "min" not in kl:
-            return v
-    return None
+def numero(v):
+    return v if isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0 else None
+
+
+def taxa(txt):
+    """'IPCA + 7,10%' -> 7.10 | '15,53%' -> 15.53"""
+    m = re.search(r"(\d+(?:[.,]\d+)?)\s*%", str(txt or ""))
+    return float(m.group(1).replace(",", ".")) if m else None
 
 
 def rotulo(agora):
@@ -100,12 +101,16 @@ def main():
                 continue
             l = linhas[ap]
             l["precificacao_td"] = b.get("lastMarketPricingDate") or l.get("precificacao_td")
-            if lado == "venda":
-                l["pu_venda"] = pegar(b, "unitary", "redemption") or pegar(b, "unitary")
-                l["taxa_venda"] = pegar(b, "redemption", "rate") or pegar(b, "rate")
-            else:
-                l["pu_compra"] = pegar(b, "unitary", "investment") or pegar(b, "unitary")
-                l["taxa_compra"] = pegar(b, "investment", "rate") or pegar(b, "rate")
+            # os dois feeds trazem compra e venda; preenche o que vier, sem apagar o que já tem
+            valores = {
+                "pu_compra":   numero(b.get("unitaryInvestmentValue")),
+                "taxa_compra": taxa(b.get("investmentProfitabilityIndexerName")),
+                "pu_venda":    numero(b.get("unitaryRedemptionValue")),
+                "taxa_venda":  taxa(b.get("redemptionProfitabilityFeeIndexerName")),
+            }
+            for campo, valor in valores.items():
+                if valor is not None:
+                    l[campo] = valor
 
     for l in linhas.values():
         if l.get("pu_venda") is None and l.get("pu_compra") is None:
