@@ -1,8 +1,7 @@
 name: Site ao vivo
 
+# Acionado pelo cron-job.org a cada 15 minutos em horário de mercado.
 on:
-  schedule:
-    - cron: "7,22,37,52 12-21 * * 1-5"   # a cada 15 min, das 9h às 18h de Brasília, seg a sex
   workflow_dispatch:
 
 permissions:
