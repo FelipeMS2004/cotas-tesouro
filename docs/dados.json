@@ -1,6 +1,6 @@
 {
- "consultado_em": "2026-11-03T11:30:30-03:00",
- "erro": null,
+ "consultado_em": "2026-11-03T11:45:23-03:00",
+ "erro": "investir: resposta sem títulos ({'TesouroLegado': [], 'Tesouro24x7': []}); resgatar: resposta sem títulos ({'TesouroLegado': [], 'Tesouro24x7': []})",
  "data": "2026-11-03",
  "precificacao_td": "2026-11-03T09:28:49.923",
  "ordem": [
