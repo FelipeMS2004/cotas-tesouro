@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-06T13:00:31-03:00",
+ "consultado_em": "2026-11-06T13:15:24-03:00",
  "erro": null,
  "data": "2026-11-06",
- "precificacao_td": "2026-11-06T12:01:47.833",
+ "precificacao_td": "2026-11-06T13:04:00.827",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -16,7 +16,7 @@
    "indexador": "Prefixado",
    "pu_compra": 487.72,
    "taxa_compra": 15.07,
-   "pu_venda": 484.85,
+   "pu_venda": 485.13,
    "taxa_venda": 15.19
   },
   "IPCA+ 2032": {
@@ -25,7 +25,7 @@
    "indexador": "IPCA+",
    "pu_compra": 3102.04,
    "taxa_compra": 7.81,
-   "pu_venda": 3080.76,
+   "pu_venda": 3082.31,
    "taxa_venda": 7.93
   },
   "Renda+ 2045": {
@@ -34,7 +34,7 @@
    "indexador": "IPCA+",
    "pu_compra": 704.1,
    "taxa_compra": 7.4,
-   "pu_venda": 683.86,
+   "pu_venda": 684.19,
    "taxa_venda": 7.52
   },
   "Renda+ 2065": {
@@ -43,7 +43,7 @@
    "indexador": "IPCA+",
    "pu_compra": 169.59,
    "taxa_compra": 7.41,
-   "pu_venda": 161.1,
+   "pu_venda": 161.18,
    "taxa_venda": 7.53
   }
  },
@@ -102,6 +102,35 @@
      "pu_compra": 169.59,
      "taxa_compra": 7.41,
      "pu_venda": 161.1,
+     "taxa_venda": 7.53
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-06T13:04:00.827",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 487.72,
+     "taxa_compra": 15.07,
+     "pu_venda": 485.13,
+     "taxa_venda": 15.19
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3102.04,
+     "taxa_compra": 7.81,
+     "pu_venda": 3082.31,
+     "taxa_venda": 7.93
+    },
+    "Renda+ 2045": {
+     "pu_compra": 704.1,
+     "taxa_compra": 7.4,
+     "pu_venda": 684.19,
+     "taxa_venda": 7.52
+    },
+    "Renda+ 2065": {
+     "pu_compra": 169.59,
+     "taxa_compra": 7.41,
+     "pu_venda": 161.18,
      "taxa_venda": 7.53
     }
    }
