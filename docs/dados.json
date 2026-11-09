@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-09T12:00:33-03:00",
+ "consultado_em": "2026-11-09T12:15:22-03:00",
  "erro": null,
  "data": "2026-11-09",
- "precificacao_td": "2026-11-09T09:26:32.157",
+ "precificacao_td": "2026-11-09T12:00:14.463",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -14,37 +14,37 @@
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
    "indexador": "Prefixado",
-   "pu_compra": 487.77,
-   "taxa_compra": 15.08,
-   "pu_venda": 484.91,
-   "taxa_venda": 15.2
+   "pu_compra": 486.91,
+   "taxa_compra": 15.12,
+   "pu_venda": 484.05,
+   "taxa_venda": 15.24
   },
   "IPCA+ 2032": {
    "nome": "Tesouro IPCA+ 2032",
    "vencimento": "2032-08-15",
    "indexador": "IPCA+",
-   "pu_compra": 3113.09,
-   "taxa_compra": 7.75,
-   "pu_venda": 3092.16,
-   "taxa_venda": 7.87
+   "pu_compra": 3111.43,
+   "taxa_compra": 7.76,
+   "pu_venda": 3090.52,
+   "taxa_venda": 7.88
   },
   "Renda+ 2045": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2045",
    "vencimento": "2064-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 707.72,
-   "taxa_compra": 7.38,
-   "pu_venda": 687.47,
-   "taxa_venda": 7.5
+   "pu_compra": 704.34,
+   "taxa_compra": 7.4,
+   "pu_venda": 684.19,
+   "taxa_venda": 7.52
   },
   "Renda+ 2065": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2065",
    "vencimento": "2084-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 171.1,
-   "taxa_compra": 7.39,
-   "pu_venda": 162.55,
-   "taxa_venda": 7.51
+   "pu_compra": 169.65,
+   "taxa_compra": 7.41,
+   "pu_venda": 161.18,
+   "taxa_venda": 7.53
   }
  },
  "historico": [
@@ -74,6 +74,35 @@
      "taxa_compra": 7.39,
      "pu_venda": 162.55,
      "taxa_venda": 7.51
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-09T12:00:14.463",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 486.91,
+     "taxa_compra": 15.12,
+     "pu_venda": 484.05,
+     "taxa_venda": 15.24
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3111.43,
+     "taxa_compra": 7.76,
+     "pu_venda": 3090.52,
+     "taxa_venda": 7.88
+    },
+    "Renda+ 2045": {
+     "pu_compra": 704.34,
+     "taxa_compra": 7.4,
+     "pu_venda": 684.19,
+     "taxa_venda": 7.52
+    },
+    "Renda+ 2065": {
+     "pu_compra": 169.65,
+     "taxa_compra": 7.41,
+     "pu_venda": 161.18,
+     "taxa_venda": 7.53
     }
    }
   }
