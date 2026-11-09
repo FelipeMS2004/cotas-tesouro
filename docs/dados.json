@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-09T09:15:23-03:00",
+ "consultado_em": "2026-11-09T09:30:26-03:00",
  "erro": null,
- "data": "2026-11-06",
- "precificacao_td": "2026-11-06T18:00:05.327",
+ "data": "2026-11-09",
+ "precificacao_td": "2026-11-09T09:26:32.157",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -14,182 +14,66 @@
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
    "indexador": "Prefixado",
-   "pu_compra": 487.07,
-   "taxa_compra": 15.1,
-   "pu_venda": 484.48,
-   "taxa_venda": 15.22
+   "pu_compra": 487.77,
+   "taxa_compra": 15.08,
+   "pu_venda": 484.91,
+   "taxa_venda": 15.2
   },
   "IPCA+ 2032": {
    "nome": "Tesouro IPCA+ 2032",
    "vencimento": "2032-08-15",
    "indexador": "IPCA+",
-   "pu_compra": 3100.39,
-   "taxa_compra": 7.82,
-   "pu_venda": 3080.68,
-   "taxa_venda": 7.94
+   "pu_compra": 3113.09,
+   "taxa_compra": 7.75,
+   "pu_venda": 3092.16,
+   "taxa_venda": 7.87
   },
   "Renda+ 2045": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2045",
    "vencimento": "2064-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 700.73,
-   "taxa_compra": 7.42,
-   "pu_venda": 680.94,
-   "taxa_venda": 7.54
+   "pu_compra": 707.72,
+   "taxa_compra": 7.38,
+   "pu_venda": 687.47,
+   "taxa_venda": 7.5
   },
   "Renda+ 2065": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2065",
    "vencimento": "2084-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 170.31,
-   "taxa_compra": 7.4,
-   "pu_venda": 161.87,
-   "taxa_venda": 7.52
+   "pu_compra": 171.1,
+   "taxa_compra": 7.39,
+   "pu_venda": 162.55,
+   "taxa_venda": 7.51
   }
  },
  "historico": [
   {
-   "precificacao": "2026-11-06T09:30:37.583",
+   "precificacao": "2026-11-09T09:26:32.157",
    "titulos": {
     "LTN 2032": {
-     "pu_compra": 485.56,
-     "taxa_compra": 15.17,
-     "pu_venda": 482.7,
-     "taxa_venda": 15.29
+     "pu_compra": 487.77,
+     "taxa_compra": 15.08,
+     "pu_venda": 484.91,
+     "taxa_venda": 15.2
     },
     "IPCA+ 2032": {
-     "pu_compra": 3093.8,
-     "taxa_compra": 7.86,
-     "pu_venda": 3072.58,
-     "taxa_venda": 7.98
+     "pu_compra": 3113.09,
+     "taxa_compra": 7.75,
+     "pu_venda": 3092.16,
+     "taxa_venda": 7.87
     },
     "Renda+ 2045": {
-     "pu_compra": 699.06,
-     "taxa_compra": 7.43,
-     "pu_venda": 678.98,
-     "taxa_venda": 7.55
+     "pu_compra": 707.72,
+     "taxa_compra": 7.38,
+     "pu_venda": 687.47,
+     "taxa_venda": 7.5
     },
     "Renda+ 2065": {
-     "pu_compra": 169.59,
-     "taxa_compra": 7.41,
-     "pu_venda": 161.1,
-     "taxa_venda": 7.53
-    }
-   }
-  },
-  {
-   "precificacao": "2026-11-06T12:01:47.833",
-   "titulos": {
-    "LTN 2032": {
-     "pu_compra": 487.72,
-     "taxa_compra": 15.07,
-     "pu_venda": 484.85,
-     "taxa_venda": 15.19
-    },
-    "IPCA+ 2032": {
-     "pu_compra": 3102.04,
-     "taxa_compra": 7.81,
-     "pu_venda": 3080.76,
-     "taxa_venda": 7.93
-    },
-    "Renda+ 2045": {
-     "pu_compra": 704.1,
-     "taxa_compra": 7.4,
-     "pu_venda": 683.86,
-     "taxa_venda": 7.52
-    },
-    "Renda+ 2065": {
-     "pu_compra": 169.59,
-     "taxa_compra": 7.41,
-     "pu_venda": 161.1,
-     "taxa_venda": 7.53
-    }
-   }
-  },
-  {
-   "precificacao": "2026-11-06T13:04:00.827",
-   "titulos": {
-    "LTN 2032": {
-     "pu_compra": 487.72,
-     "taxa_compra": 15.07,
-     "pu_venda": 485.13,
-     "taxa_venda": 15.19
-    },
-    "IPCA+ 2032": {
-     "pu_compra": 3102.04,
-     "taxa_compra": 7.81,
-     "pu_venda": 3082.31,
-     "taxa_venda": 7.93
-    },
-    "Renda+ 2045": {
-     "pu_compra": 704.1,
-     "taxa_compra": 7.4,
-     "pu_venda": 684.19,
-     "taxa_venda": 7.52
-    },
-    "Renda+ 2065": {
-     "pu_compra": 169.59,
-     "taxa_compra": 7.41,
-     "pu_venda": 161.18,
-     "taxa_venda": 7.53
-    }
-   }
-  },
-  {
-   "precificacao": "2026-11-06T15:30:45.727",
-   "titulos": {
-    "LTN 2032": {
-     "pu_compra": 487.07,
-     "taxa_compra": 15.1,
-     "pu_venda": 484.48,
-     "taxa_venda": 15.22
-    },
-    "IPCA+ 2032": {
-     "pu_compra": 3100.39,
-     "taxa_compra": 7.82,
-     "pu_venda": 3080.68,
-     "taxa_venda": 7.94
-    },
-    "Renda+ 2045": {
-     "pu_compra": 700.73,
-     "taxa_compra": 7.42,
-     "pu_venda": 680.94,
-     "taxa_venda": 7.54
-    },
-    "Renda+ 2065": {
-     "pu_compra": 170.31,
-     "taxa_compra": 7.4,
-     "pu_venda": 161.87,
-     "taxa_venda": 7.52
-    }
-   }
-  },
-  {
-   "precificacao": "2026-11-06T18:00:05.327",
-   "titulos": {
-    "LTN 2032": {
-     "pu_compra": 487.07,
-     "taxa_compra": 15.1,
-     "pu_venda": 484.48,
-     "taxa_venda": 15.22
-    },
-    "IPCA+ 2032": {
-     "pu_compra": 3100.39,
-     "taxa_compra": 7.82,
-     "pu_venda": 3080.68,
-     "taxa_venda": 7.94
-    },
-    "Renda+ 2045": {
-     "pu_compra": 700.73,
-     "taxa_compra": 7.42,
-     "pu_venda": 680.94,
-     "taxa_venda": 7.54
-    },
-    "Renda+ 2065": {
-     "pu_compra": 170.31,
-     "taxa_compra": 7.4,
-     "pu_venda": 161.87,
-     "taxa_venda": 7.52
+     "pu_compra": 171.1,
+     "taxa_compra": 7.39,
+     "pu_venda": 162.55,
+     "taxa_venda": 7.51
     }
    }
   }
