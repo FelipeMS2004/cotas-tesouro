@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-09T15:31:18-03:00",
+ "consultado_em": "2026-11-09T15:45:21-03:00",
  "erro": null,
  "data": "2026-11-09",
- "precificacao_td": "2026-11-09T13:03:48.513",
+ "precificacao_td": "2026-11-09T15:31:41.140",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -14,19 +14,19 @@
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
    "indexador": "Prefixado",
-   "pu_compra": 486.91,
-   "taxa_compra": 15.12,
-   "pu_venda": 484.32,
-   "taxa_venda": 15.24
+   "pu_compra": 487.77,
+   "taxa_compra": 15.08,
+   "pu_venda": 485.18,
+   "taxa_venda": 15.2
   },
   "IPCA+ 2032": {
    "nome": "Tesouro IPCA+ 2032",
    "vencimento": "2032-08-15",
    "indexador": "IPCA+",
-   "pu_compra": 3111.43,
-   "taxa_compra": 7.76,
-   "pu_venda": 3091.66,
-   "taxa_venda": 7.88
+   "pu_compra": 3113.09,
+   "taxa_compra": 7.75,
+   "pu_venda": 3093.3,
+   "taxa_venda": 7.87
   },
   "Renda+ 2045": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2045",
@@ -41,10 +41,10 @@
    "nome": "Tesouro Renda+ Aposentadoria Extra 2065",
    "vencimento": "2084-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 169.65,
-   "taxa_compra": 7.41,
-   "pu_venda": 161.24,
-   "taxa_venda": 7.53
+   "pu_compra": 168.93,
+   "taxa_compra": 7.42,
+   "pu_venda": 160.55,
+   "taxa_venda": 7.54
   }
  },
  "historico": [
@@ -132,6 +132,35 @@
      "taxa_compra": 7.41,
      "pu_venda": 161.24,
      "taxa_venda": 7.53
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-09T15:31:41.140",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 487.77,
+     "taxa_compra": 15.08,
+     "pu_venda": 485.18,
+     "taxa_venda": 15.2
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3113.09,
+     "taxa_compra": 7.75,
+     "pu_venda": 3093.3,
+     "taxa_venda": 7.87
+    },
+    "Renda+ 2045": {
+     "pu_compra": 704.34,
+     "taxa_compra": 7.4,
+     "pu_venda": 684.44,
+     "taxa_venda": 7.52
+    },
+    "Renda+ 2065": {
+     "pu_compra": 168.93,
+     "taxa_compra": 7.42,
+     "pu_venda": 160.55,
+     "taxa_venda": 7.54
     }
    }
   }
