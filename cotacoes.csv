@@ -1803,3 +1803,7 @@ data,horario,capturado_as,titulo,pu_compra,taxa_compra,pu_venda,taxa_venda,preci
 2026-11-16,12h,14:30,Renda+ 2045,691.92,7.48,672.41,7.6,2026-11-16T13:04:44.240,
 2026-11-16,12h,14:30,IPCA+ 2032,3114.07,7.77,3094.34,7.89,2026-11-16T13:04:44.240,
 2026-11-16,12h,14:30,LTN 2032,485.26,15.26,482.69,15.38,2026-11-16T13:04:44.240,
+2026-11-16,12h,14:45,Renda+ 2065,,,,,,título não encontrado no feed
+2026-11-16,12h,14:45,Renda+ 2045,,,,,,título não encontrado no feed
+2026-11-16,12h,14:45,IPCA+ 2032,,,,,,título não encontrado no feed
+2026-11-16,12h,14:45,LTN 2032,,,,,,título não encontrado no feed
