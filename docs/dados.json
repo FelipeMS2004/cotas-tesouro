@@ -1,5 +1,5 @@
 {
- "consultado_em": "2026-11-18T10:30:27-03:00",
+ "consultado_em": "2026-11-18T10:45:21-03:00",
  "erro": null,
  "data": "2026-11-18",
  "precificacao_td": "2026-11-18T09:24:27.843",
@@ -10,15 +10,6 @@
   "LTN 2032"
  ],
  "titulos": {
-  "IPCA+ 2032": {
-   "nome": "Tesouro IPCA+ 2032",
-   "vencimento": "2032-08-15",
-   "indexador": "IPCA+",
-   "pu_compra": 3121.65,
-   "taxa_compra": 7.74,
-   "pu_venda": 3100.58,
-   "taxa_venda": 7.86
-  },
   "LTN 2032": {
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
@@ -27,6 +18,15 @@
    "taxa_compra": 15.28,
    "pu_venda": 482.54,
    "taxa_venda": 15.4
+  },
+  "IPCA+ 2032": {
+   "nome": "Tesouro IPCA+ 2032",
+   "vencimento": "2032-08-15",
+   "indexador": "IPCA+",
+   "pu_compra": 3121.65,
+   "taxa_compra": 7.74,
+   "pu_venda": 3100.58,
+   "taxa_venda": 7.86
   },
   "Renda+ 2045": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2045",
