@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-18T11:45:29-03:00",
+ "consultado_em": "2026-11-18T12:00:34-03:00",
  "erro": null,
  "data": "2026-11-18",
- "precificacao_td": "2026-11-18T09:24:27.843",
+ "precificacao_td": "2026-11-18T11:56:37.967",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -14,28 +14,28 @@
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
    "indexador": "Prefixado",
-   "pu_compra": 485.38,
-   "taxa_compra": 15.28,
-   "pu_venda": 482.54,
-   "taxa_venda": 15.4
+   "pu_compra": 486.02,
+   "taxa_compra": 15.25,
+   "pu_venda": 483.18,
+   "taxa_venda": 15.37
   },
   "IPCA+ 2032": {
    "nome": "Tesouro IPCA+ 2032",
    "vencimento": "2032-08-15",
    "indexador": "IPCA+",
-   "pu_compra": 3121.65,
-   "taxa_compra": 7.74,
-   "pu_venda": 3100.58,
-   "taxa_venda": 7.86
+   "pu_compra": 3123.31,
+   "taxa_compra": 7.73,
+   "pu_venda": 3102.22,
+   "taxa_venda": 7.85
   },
   "Renda+ 2045": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2045",
    "vencimento": "2064-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 689.19,
-   "taxa_compra": 7.5,
-   "pu_venda": 669.5,
-   "taxa_venda": 7.62
+   "pu_compra": 690.84,
+   "taxa_compra": 7.49,
+   "pu_venda": 671.09,
+   "taxa_venda": 7.61
   },
   "Renda+ 2065": {
    "nome": "Tesouro Renda+ Aposentadoria Extra 2065",
@@ -68,6 +68,35 @@
      "taxa_compra": 7.5,
      "pu_venda": 669.5,
      "taxa_venda": 7.62
+    },
+    "Renda+ 2065": {
+     "pu_compra": 164.35,
+     "taxa_compra": 7.49,
+     "pu_venda": 156.15,
+     "taxa_venda": 7.61
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-18T11:56:37.967",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 486.02,
+     "taxa_compra": 15.25,
+     "pu_venda": 483.18,
+     "taxa_venda": 15.37
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3123.31,
+     "taxa_compra": 7.73,
+     "pu_venda": 3102.22,
+     "taxa_venda": 7.85
+    },
+    "Renda+ 2045": {
+     "pu_compra": 690.84,
+     "taxa_compra": 7.49,
+     "pu_venda": 671.09,
+     "taxa_venda": 7.61
     },
     "Renda+ 2065": {
      "pu_compra": 164.35,
