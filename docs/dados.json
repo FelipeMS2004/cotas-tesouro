@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-23T12:00:30-03:00",
+ "consultado_em": "2026-11-23T12:15:22-03:00",
  "erro": null,
  "data": "2026-11-23",
- "precificacao_td": "2026-11-23T09:22:44.260",
+ "precificacao_td": "2026-11-23T12:00:10.557",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -14,10 +14,10 @@
    "nome": "Tesouro Prefixado 2032",
    "vencimento": "2032-01-01",
    "indexador": "Prefixado",
-   "pu_compra": 478.3,
-   "taxa_compra": 15.64,
-   "pu_venda": 475.51,
-   "taxa_venda": 15.76
+   "pu_compra": 479.35,
+   "taxa_compra": 15.59,
+   "pu_venda": 476.55,
+   "taxa_venda": 15.71
   },
   "IPCA+ 2032": {
    "nome": "Tesouro IPCA+ 2032",
@@ -41,10 +41,10 @@
    "nome": "Tesouro Renda+ Aposentadoria Extra 2065",
    "vencimento": "2084-12-15",
    "indexador": "IPCA+",
-   "pu_compra": 163.16,
-   "taxa_compra": 7.51,
-   "pu_venda": 155.02,
-   "taxa_venda": 7.63
+   "pu_compra": 165.95,
+   "taxa_compra": 7.47,
+   "pu_venda": 157.66,
+   "taxa_venda": 7.59
   }
  },
  "historico": [
@@ -74,6 +74,35 @@
      "taxa_compra": 7.51,
      "pu_venda": 155.02,
      "taxa_venda": 7.63
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-23T12:00:10.557",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 479.35,
+     "taxa_compra": 15.59,
+     "pu_venda": 476.55,
+     "taxa_venda": 15.71
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3094.27,
+     "taxa_compra": 7.93,
+     "pu_venda": 3073.42,
+     "taxa_venda": 8.05
+    },
+    "Renda+ 2045": {
+     "pu_compra": 685.11,
+     "taxa_compra": 7.53,
+     "pu_venda": 665.54,
+     "taxa_venda": 7.65
+    },
+    "Renda+ 2065": {
+     "pu_compra": 165.95,
+     "taxa_compra": 7.47,
+     "pu_venda": 157.66,
+     "taxa_venda": 7.59
     }
    }
   }
