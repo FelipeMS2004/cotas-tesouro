@@ -1,8 +1,8 @@
 {
- "consultado_em": "2026-11-26T18:00:28-03:00",
- "erro": "nenhum dos quatro títulos veio na resposta do Tesouro",
+ "consultado_em": "2026-11-26T18:15:20-03:00",
+ "erro": null,
  "data": "2026-11-26",
- "precificacao_td": "2026-11-26T15:28:27.540",
+ "precificacao_td": "2026-11-26T18:00:29.563",
  "ordem": [
   "Renda+ 2065",
   "Renda+ 2045",
@@ -137,6 +137,35 @@
   },
   {
    "precificacao": "2026-11-26T15:28:27.540",
+   "titulos": {
+    "LTN 2032": {
+     "pu_compra": 496.7,
+     "taxa_compra": 14.82,
+     "pu_venda": 494.08,
+     "taxa_venda": 14.94
+    },
+    "IPCA+ 2032": {
+     "pu_compra": 3137.7,
+     "taxa_compra": 7.69,
+     "pu_venda": 3117.91,
+     "taxa_venda": 7.81
+    },
+    "Renda+ 2045": {
+     "pu_compra": 705.87,
+     "taxa_compra": 7.41,
+     "pu_venda": 685.96,
+     "taxa_venda": 7.53
+    },
+    "Renda+ 2065": {
+     "pu_compra": 171.88,
+     "taxa_compra": 7.39,
+     "pu_venda": 163.36,
+     "taxa_venda": 7.51
+    }
+   }
+  },
+  {
+   "precificacao": "2026-11-26T18:00:29.563",
    "titulos": {
     "LTN 2032": {
      "pu_compra": 496.7,
